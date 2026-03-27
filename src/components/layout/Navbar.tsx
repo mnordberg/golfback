@@ -80,18 +80,18 @@ function DropdownMenu({
 
       {isOpen && (
         <div className="absolute left-1/2 top-full z-50 pt-3 -translate-x-1/2">
-          <div className="w-72 rounded-xl border border-brand-mid bg-brand-dark/95 p-2 shadow-2xl backdrop-blur-lg">
+          <div className="w-72 rounded-xl border border-neutral-200 bg-white p-2 shadow-2xl">
             {item.children.map((child) => (
               <Link
                 key={child.href}
                 href={child.href}
                 onClick={onClose}
-                className="block rounded-lg px-4 py-3 transition-colors hover:bg-brand-mid/50"
+                className="block rounded-lg px-4 py-3 transition-colors hover:bg-neutral-100"
               >
-                <span className="block text-sm font-semibold text-white">
+                <span className="block text-sm font-semibold text-neutral-900">
                   {child.label}
                 </span>
-                <span className="block text-xs text-neutral-400">
+                <span className="block text-xs text-neutral-500">
                   {child.description}
                 </span>
               </Link>

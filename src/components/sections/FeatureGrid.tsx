@@ -19,6 +19,7 @@ import {
   ArrowUpRight,
   Layers,
   MousePointerClick,
+  Send,
   type LucideIcon,
 } from "lucide-react";
 import clsx from "clsx";
@@ -48,6 +49,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   "arrow-up-right": ArrowUpRight,
   layers: Layers,
   "mouse-pointer-click": MousePointerClick,
+  send: Send,
 };
 
 type Feature = {

@@ -7,6 +7,10 @@ import {
   CreditCard,
   Database,
   Mail,
+  Plug,
+  ClipboardList,
+  Ban,
+  DollarSign,
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -21,6 +25,10 @@ const STEP_ICONS: Record<string, LucideIcon> = {
   "credit-card": CreditCard,
   database: Database,
   mail: Mail,
+  plug: Plug,
+  "clipboard-list": ClipboardList,
+  ban: Ban,
+  "dollar-sign": DollarSign,
 };
 
 type Step = {

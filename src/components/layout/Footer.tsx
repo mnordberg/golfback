@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
-import { footerLinks } from "@/lib/data/navigation";
+import { footerLinks, footerProducts, footerFeatures } from "@/lib/data/navigation";
 
 function FooterLinkGroup({
   title,
@@ -59,10 +59,11 @@ export default function Footer() {
         </div>
 
         {/* Link columns */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-          <FooterLinkGroup title="Solutions" links={footerLinks.solutions} />
-          <FooterLinkGroup title="Company" links={footerLinks.company} />
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
+          <FooterLinkGroup title="Products" links={footerProducts} />
+          <FooterLinkGroup title="Features" links={footerFeatures} />
           <FooterLinkGroup title="Resources" links={footerLinks.resources} />
+          <FooterLinkGroup title="Company" links={footerLinks.company} />
 
           {/* Connect column */}
           <div>
@@ -111,12 +112,11 @@ export default function Footer() {
         <Container className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-neutral-500 sm:flex-row">
           <p>&copy; {new Date().getFullYear()} GolfBack Solutions. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="transition-colors hover:text-neutral-300">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="transition-colors hover:text-neutral-300">
-              Disclaimer
-            </Link>
+            {footerLinks.legal.map((link) => (
+              <Link key={link.href} href={link.href} className="transition-colors hover:text-neutral-300">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </Container>
       </div>
